@@ -182,7 +182,7 @@ class AudienceController extends Controller
     public function restore($id)
     {
         try {
-            $audience = Audience::onlyTrashed()->where(' id', $id);
+            $audience = Audience::onlyTrashed()->where('id', $id);
             $audience->restore();
             $dataBalik = $audience->forceDelete();
 
